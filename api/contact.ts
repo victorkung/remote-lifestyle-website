@@ -128,7 +128,7 @@ export default async function handler(
     const { error } = await resend.emails.send({
       from: "TRL Studios <hello@mail.theremotelifestyle.com>",
       to: "victor@theremotelifestyle.com",
-      reply_to: email,
+      replyTo: email,
       subject: `New Studios inquiry from ${name}`,
       html: htmlBody,
       text: textBody,
