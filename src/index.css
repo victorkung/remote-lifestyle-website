@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --font-sans: var(--app-font-sans);
+}
+
+/*
+Steel Blue palette (from logo-exploration palettes.ts, index 5):
+  Deep steel:  #1C2B3A  →  HSL 210 35% 17%
+  Steel blue:  #5B8DB8  →  HSL 208 40% 54%
+  Pale tint:   #EEF3F8  →  HSL 210 41% 95%
+  White:       #FFFFFF
+*/
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 210 35% 17%;
+  --border: 208 40% 90%;
+
+  --app-font-sans: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background-color: #5B8DB8;
+    color: #ffffff;
+  }
+}
