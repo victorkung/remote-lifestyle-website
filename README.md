@@ -2,6 +2,8 @@
 
 Temporary landing page for [theremotelifestyle.com](https://theremotelifestyle.com).
 
+The previous full site (marketing page + contact form) is archived in [`archive/pre-coming-soon/`](archive/pre-coming-soon/) for future restoration.
+
 ## Stack
 
 - React + Vite
